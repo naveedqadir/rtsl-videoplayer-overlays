@@ -76,7 +76,7 @@ const OverlayOptions = () => {
               type="text"
               id="positionX"
               name="positionX"
-              placeholder="Position Left in %"
+              placeholder="Position Left (e.g., `20px`, `4em`, `2rem`, `20%`)"
               value={newOverlay.positionX}
               onChange={(e) =>
                 setNewOverlay({ ...newOverlay, positionX: e.target.value })
@@ -95,7 +95,7 @@ const OverlayOptions = () => {
               type="text"
               id="positionY"
               name="positionY"
-              placeholder="Position Top in %"
+              placeholder="Position Top (e.g., `20px`, `4em`, `2rem`, `20%`)"
               value={newOverlay.positionY}
               onChange={(e) =>
                 setNewOverlay({ ...newOverlay, positionY: e.target.value })
@@ -114,7 +114,7 @@ const OverlayOptions = () => {
               type="text"
               id="size"
               name="size"
-              placeholder="fontSize in rem"
+              placeholder="fontSize (e.g., `20px`, `4em`, `2rem`, `20%`)"
               value={newOverlay.size}
               onChange={(e) =>
                 setNewOverlay({ ...newOverlay, size: e.target.value })

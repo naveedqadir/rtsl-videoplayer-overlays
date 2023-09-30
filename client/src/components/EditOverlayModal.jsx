@@ -93,7 +93,7 @@ const EditOverlayModal = ({ isOpen, onClose, overlay, fetchOverlaySettings }) =>
                             type="text"
                             id="positionX"
                             name="positionX"
-                            placeholder="Position Left in %"
+                            placeholder="Position Left (e.g., `20px`, `4em`, `2rem`, `20%`)"
                             value={editedOverlay.positionX}
                             onChange={(e) =>
                               setEditedOverlay({
@@ -115,7 +115,7 @@ const EditOverlayModal = ({ isOpen, onClose, overlay, fetchOverlaySettings }) =>
                             type="text"
                             id="positionY"
                             name="positionY"
-                            placeholder="Position Top in %"
+                            placeholder="Position Top (e.g., `20px`, `4em`, `2rem`, `20%`)"
                             value={editedOverlay.positionY}
                             onChange={(e) =>
                               setEditedOverlay({
@@ -137,7 +137,7 @@ const EditOverlayModal = ({ isOpen, onClose, overlay, fetchOverlaySettings }) =>
                             type="text"
                             id="size"
                             name="size"
-                            placeholder="fontSize in rem"
+                            placeholder="fontSize (e.g., `20px`, `4em`, `2rem`, `20%`)"
                             value={editedOverlay.size}
                             onChange={(e) =>
                               setEditedOverlay({
