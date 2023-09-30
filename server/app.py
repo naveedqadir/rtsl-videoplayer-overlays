@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS()
 mongo_uri = os.getenv("MONGO_URI")
 
 if mongo_uri:
