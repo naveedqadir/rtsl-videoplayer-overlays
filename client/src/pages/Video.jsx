@@ -13,7 +13,7 @@ export default function Video() {
     async function fetchOverlays() {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:5000/api/overlaySettings"
+          "https://videobackend-mu.vercel.app/api/overlaySettings"
         );
         setOverlays(response.data);
       } catch (error) {
