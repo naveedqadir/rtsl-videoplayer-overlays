@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS()
+CORS(app, resources={r"/*": {"origins": "https://video-rtsl.vercel.app"}})
 mongo_uri = os.getenv("MONGO_URI")
 
 if mongo_uri:
