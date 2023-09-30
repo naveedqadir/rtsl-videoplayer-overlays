@@ -13,7 +13,7 @@ export default function Video() {
     async function fetchOverlays() {
       try {
         const response = await axios.get(
-          "https://videobackend-mu.vercel.app/api/overlaySettings"
+          "https://naveedqadir01.pythonanywhere.com/api/overlaySettings"
         );
         setOverlays(response.data);
       } catch (error) {

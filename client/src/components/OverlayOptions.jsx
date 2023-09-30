@@ -20,7 +20,7 @@ const OverlayOptions = () => {
   const fetchOverlaySettings = async () => {
     try {
       const response = await axios.get(
-        "https://videobackend-mu.vercel.app/api/overlaySettings"
+        "https://naveedqadir01.pythonanywhere.com/api/overlaySettings"
       );
       setOverlaySettings(response.data);
     } catch (error) {
@@ -30,7 +30,7 @@ const OverlayOptions = () => {
 
   const createOverlaySetting = async () => {
     try {
-      await axios.post("https://videobackend-mu.vercel.app/api/overlaySettings", newOverlay);
+      await axios.post("https://naveedqadir01.pythonanywhere.com/api/overlaySettings", newOverlay);
       fetchOverlaySettings();
       setNewOverlay({ positionX: "", positionY: "", size: "", content: "" });
     } catch (error) {
@@ -40,7 +40,7 @@ const OverlayOptions = () => {
 
   const deleteOverlaySetting = async (id) => {
     try {
-      await axios.delete(`https://videobackend-mu.vercel.app/api/overlaySettings/${id}`);
+      await axios.delete(`https://naveedqadir01.pythonanywhere.com/api/overlaySettings/${id}`);
       fetchOverlaySettings();
     } catch (error) {
       console.error(error);

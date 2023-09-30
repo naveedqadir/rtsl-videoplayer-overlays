@@ -11,7 +11,7 @@ export default function App() {
 
   async function checkBackendStatus() {
     try {
-      const response = await fetch('https://videobackend-mu.vercel.app/api/check-status');
+      const response = await fetch('https://naveedqadir01.pythonanywhere.com/api/check-status');
       const data = await response.json();
       setBackendStatus(data.status);
     } catch (error) {
