@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "https://video-rtsl.vercel.app"}})
 mongo_uri = os.getenv("MONGO_URI")
 
 if mongo_uri:
@@ -50,7 +50,9 @@ def delete_overlay_setting(id):
     else:
         return jsonify({'message': 'Overlay setting not found'}), 404
 
-app_flask = app
+if __name__ == '__main__':
+    from waitress import serve
+    serve(app)
 
 
 
