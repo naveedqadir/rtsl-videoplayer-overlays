@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 
 export default function ResponsiveOverlay({ hidden, shownOverlay }) {
   return (
@@ -10,7 +10,7 @@ export default function ResponsiveOverlay({ hidden, shownOverlay }) {
             style={{
               left: `calc(${shownOverlay.positionX} - 2rem)`,
               top: `calc(${shownOverlay.positionY} - 2rem)`,
-              fontSize: `${shownOverlay.size}`,
+              fontSize: `${shownOverlay.size}`, 
               backgroundImage: 'linear-gradient(45deg, #f06, #09f, #6f0, #f06)',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
@@ -27,9 +27,9 @@ export default function ResponsiveOverlay({ hidden, shownOverlay }) {
 ResponsiveOverlay.propTypes = {
     hidden: PropTypes.bool.isRequired,
     shownOverlay: PropTypes.shape({
-      positionX: PropTypes.string.isRequired,
-      positionY: PropTypes.string.isRequired,
-      size: PropTypes.string.isRequired,
+      positionX: PropTypes.number.isRequired,
+      positionY: PropTypes.number.isRequired,
+      size: PropTypes.number.isRequired,
       content: PropTypes.string.isRequired,
     }).isRequired,
   };
