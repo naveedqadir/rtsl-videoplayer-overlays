@@ -16,6 +16,10 @@ if mongo_uri:
 else:
     raise ValueError("MONGO_URI environment variable is not set!")
 
+@app.route('/api/check-status', methods=['GET'])
+def check_status():
+    status = 'online'
+    return jsonify({'status': status})
 
 @app.route('/api/overlaySettings', methods=['POST'])
 def create_overlay_setting():
