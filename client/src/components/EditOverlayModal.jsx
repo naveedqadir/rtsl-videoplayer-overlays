@@ -22,7 +22,7 @@ const EditOverlayModal = ({ isOpen, onClose, overlay, fetchOverlaySettings }) =>
       };
   
       await axios.put(
-        `https://videobackend-mu.vercel.app/api/overlaySettings/${overlay._id}`,
+        `https://naveedqadir01.pythonanywhere.com/api/overlaySettings/${overlay._id}`,
         updatedData
       );
       fetchOverlaySettings();
