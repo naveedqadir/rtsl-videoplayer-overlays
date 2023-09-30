@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from 'prop-types';
 
 export default function EnterUrl({ setrtspURL }) {
   const [url, setUrl] = useState("");
@@ -43,3 +44,7 @@ export default function EnterUrl({ setrtspURL }) {
     </div>
   );
 }
+
+EnterUrl.propTypes = {
+  setrtspURL: PropTypes.func.isRequired,
+};

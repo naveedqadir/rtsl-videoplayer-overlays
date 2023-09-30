@@ -1,6 +1,7 @@
 import ReactPlayer from 'react-player';
+import PropTypes from 'prop-types';
 
-const VideoComponent = ({rtspURL}) => {
+const VideoComponent = ({ rtspURL }) => {
   return (
     <div className="container mx-2 h-[350px]">
       <ReactPlayer
@@ -14,4 +15,9 @@ const VideoComponent = ({rtspURL}) => {
   );
 };
 
+VideoComponent.propTypes = {
+  rtspURL: PropTypes.string.isRequired,
+};
+
 export default VideoComponent;
+

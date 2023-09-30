@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ResponsiveOverlay from "./ResponsiveOverlay";
+import PropTypes from 'prop-types';
 
 const OverlayShow = ({ overlays }) => {
   const [hidden, setHidden] = useState(false);
@@ -38,6 +39,9 @@ const OverlayShow = ({ overlays }) => {
 
     </div>
   );
+};
+OverlayShow.propTypes = {
+  overlays: PropTypes.array.isRequired,
 };
 
 export default OverlayShow;
