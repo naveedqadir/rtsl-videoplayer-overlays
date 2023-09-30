@@ -8,13 +8,13 @@ export default function ResponsiveOverlay({ hidden, shownOverlay }) {
           <div
             className="p-4 shadow-lg rounded-md absolute"
             style={{
-              left: `calc(${shownOverlay.positionX} - 2rem)`, // Center horizontally
-              top: `calc(${shownOverlay.positionY} - 2rem)`, // Center vertically
-              fontSize: `${shownOverlay.size}`, // Default font size
+              left: `calc(${shownOverlay.positionX} - 2rem)`,
+              top: `calc(${shownOverlay.positionY} - 2rem)`,
+              fontSize: `${shownOverlay.size}`,
               backgroundImage: 'linear-gradient(45deg, #f06, #09f, #6f0, #f06)',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
-              animation: 'rainbow 3s linear infinite', // Rainbow animation
+              animation: 'rainbow 3s linear infinite',
             }}
           >
             {shownOverlay.content}
@@ -27,9 +27,9 @@ export default function ResponsiveOverlay({ hidden, shownOverlay }) {
 ResponsiveOverlay.propTypes = {
     hidden: PropTypes.bool.isRequired,
     shownOverlay: PropTypes.shape({
-      positionX: PropTypes.number.isRequired,
-      positionY: PropTypes.number.isRequired, // Add positionY validation
-      size: PropTypes.number.isRequired,
+      positionX: PropTypes.string.isRequired,
+      positionY: PropTypes.string.isRequired,
+      size: PropTypes.string.isRequired,
       content: PropTypes.string.isRequired,
     }).isRequired,
   };
