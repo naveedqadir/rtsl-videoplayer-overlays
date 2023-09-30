@@ -9,6 +9,7 @@ export default function Routing() {
           <Route path="/" element={<Home />} />
           <Route path="/app" element={<Video />} />
           <Route path="/overlaysettings" element={<OverlaySettings />} />
+          <Route path="/test" element={<Home />} />
         </Routes>
   );
 }
