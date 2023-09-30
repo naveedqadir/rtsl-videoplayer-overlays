@@ -6,7 +6,7 @@ export default function ResponsiveOverlay({ hidden, shownOverlay }) {
       {hidden === true && (
         <div className="inset-0 flex items-center justify-center">
           <div
-            className="p-4 shadow-lg rounded-md absolute"
+            className="p-4 shadow-lg rounded-md"
             style={{
               left: `calc(${shownOverlay.positionX} - 2rem)`,
               top: `calc(${shownOverlay.positionY} - 2rem)`,
