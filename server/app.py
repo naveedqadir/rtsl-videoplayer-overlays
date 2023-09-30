@@ -50,10 +50,7 @@ def delete_overlay_setting(id):
     else:
         return jsonify({'message': 'Overlay setting not found'}), 404
 
-if __name__ == '__main__':
-    from waitress import serve
-    serve(app)
-
+app_flask = app
 
 
 
